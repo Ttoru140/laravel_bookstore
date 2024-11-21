@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+@extends('layout')
+
+@section('page-content')
     <title>Book List</title>
     <style>
         /* General styling */
@@ -62,7 +60,7 @@
 </head>
 <body>
 <p>
-        <a href="{{route('books.show',$book->id)}}">Back</a>
+        <a href="{{route('books.index')}}">Back</a>
     </p>
     <h1>Book Details</h1>
     <table>
@@ -95,5 +93,4 @@
          </tr>
        
     </table>
-</body>
-</html>
+@endsection

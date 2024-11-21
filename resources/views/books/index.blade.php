@@ -1,8 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+@extends('layout')
+
+@section('page-content')
+
+
+
     <title>Book List</title>
     <style>
         /* General styling */
@@ -81,5 +82,5 @@
         </tr>
         @endforeach
     </table>
-</body>
-</html>
+    {{$books->links()}}
+@endsection

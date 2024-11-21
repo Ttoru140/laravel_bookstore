@@ -9,7 +9,7 @@ class Bookcontroller extends Controller
 {
     public function index()
     {
-        $books = Book::where ('stock','>',0)->get();
+        $books = Book::paginate(10);
         return view('books.index')->with('books',$books);
     }
     public function show($id)
