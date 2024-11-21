@@ -61,25 +61,39 @@
     </style>
 </head>
 <body>
-   
-    <h1>Book List</h1>
+<p>
+        <a href="{{route('books.show',$book->id)}}">Back</a>
+    </p>
+    <h1>Book Details</h1>
     <table>
         <tr>
+
             <th>ID</th>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Price</th>
-            <th>Action</th>
+            <td>{{$book->id}}</td>
         </tr>
-        @foreach ($books as $book)
         <tr>
-            <td>{{ $book->id }}</td>
-            <td>{{ $book->title }}</td>
-            <td>{{ $book->author }}</td>
-            <td>{{ $book->price }}</td>
-            <td><a href="{{url('books/'.$book->id.'\show')}}">View</a></td>
+            <th>Title</th>
+            <td>{{$book->title}}</td>
         </tr>
-        @endforeach
+        <tr>
+            <th>Author</th>
+            <td>{{$book->author}}</td>  
+        </tr>
+        <tr>
+            <th>ISBN</th>
+            <td>{{$book->isbn}}</td>
+        </tr>
+        <tr>
+            <th>Price</th>
+            <td>{{$book->price}}</td>
+        </tr>
+        <tr>
+            <th>
+                Stock
+            </th>
+            <td>{{$book->stock}}</td>
+         </tr>
+       
     </table>
 </body>
 </html>
