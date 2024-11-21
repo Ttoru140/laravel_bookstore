@@ -1,10 +1,22 @@
 @extends('layout')
 
 @section('page-content')
+<title>Book List</title>
+<h1>Book List</h1>
 
+<div class="row mt 2">
+    <div class="col-lg-10">
+        search functionality
+    </div>
 
+<div class="col-lg-2">
+   <p class=" text-end">
+    <a href="{{route('books.create')}}" class="btn btn-primary">Add Book</a>
+   </p>
+</div>
+</div>
 
-    <title>Book List</title>
+    
     <style>
         /* General styling */
         body {
@@ -63,7 +75,7 @@
 </head>
 <body>
    
-    <h1>Book List</h1>
+    
     <table>
         <tr>
             <th>ID</th>

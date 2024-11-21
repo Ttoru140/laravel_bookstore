@@ -19,4 +19,24 @@ class Bookcontroller extends Controller
         
         return view('books.show')->with('book',$books);
     }
+    public function create()
+    {
+        return view('books.create');
+    }
+    //store book
+    
+    public function store(Request $request)
+    {
+        $rules=[
+            'title'=>'required',
+            'author'=>'required',
+            'isbn'=>'required|numeric',
+            'price'=>'required|numeric',
+            'stock'=>'required|numeric',
+            
+
+        ];
+        $request->validate($rules);
+        return 'All data validation success';
+}
 }
